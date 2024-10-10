@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { Menu, ConfigProvider } from "antd";
-import GovimithuraLogo from "../assets/logo.svg";
+import GovimithuraLogo from "../../assets/logo.svg";
 
 function getItem(label, key, icon, children, type) {
   return {

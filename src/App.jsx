@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import "./index.css"; 
-import ImportedSideMenu from "./components/SideMenu";
-import NavBar from "./components/NavBar";
+import ImportedSideMenu from "./components/common/SideMenu";
+import NavBar from "./components/common/NavBar";
 import DashBoard from "./components/DashBoard";
 import Login from "./pages/Auth/Login";
 import SignUp from "./pages/Auth/Signup";
