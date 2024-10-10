@@ -43,14 +43,6 @@ const GarbageRequestForms = () => {
 
   return (
     <>
-      <Button 
-        onClick={handleModalOpen}
-        type="primary"
-        icon={<PlusOutlined />}
-        className="bg-blue-800 border-blue-800 text-white hover:bg-blue-700 mb-5"
-      >
-        Add Request Item
-      </Button>
       <Modal
         title={editingGarbageRequest ? "Edit Request Item" : "Add Request Item"}
         open={isModalOpen}
