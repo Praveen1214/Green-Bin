@@ -1,21 +1,28 @@
-// api/requestItemApi.js
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/requestitem';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api/pickupgarbage';
 
-export const fetchRequestItems = () => axios.get(`${API_URL}/requestitems`).then(res => res.data);
+export const fetchSchedules = async () => {
+  const response = await axios.get(`${API_URL}/getallpickupgarbage`);
+  return response.data;
+};
 
-export const addRequestItem = (requestItemData) => axios.post(`${API_URL}/add`, requestItemData);
+export const addSchedule = async (scheduleData) => {
+  const response = await axios.post(`${API_URL}/schedules`, scheduleData);
+  return response.data;
+};
 
-export const updateRequestItem = (id, requestItemData) => axios.patch(`${API_URL}/request-items/${id}`, requestItemData);
+export const updateSchedule = async (id, scheduleData) => {
+  const response = await axios.put(`${API_URL}/schedules/${id}`, scheduleData);
+  return response.data;
+};
 
-export const deleteRequestItem = (id) => axios.delete(`${API_URL}/request-items/${id}`);
+export const deleteSchedule = async (id) => {
+  const response = await axios.delete(`${API_URL}/schedules/${id}`);
+  return response.data;
+};
 
-export const updateRequestStatus = (id, status) => axios.patch(`${API_URL}/request-items/${id}/status`, { status });
-
-export const fetchRequestItemById = (id) => axios.get(`${API_URL}/request-items/${id}`).then(res => res.data);
-
-// If you need to fetch request items by a specific criteria, you can add more functions like:
-export const fetchRequestItemsByStatus = (status) => axios.get(`${API_URL}/request-items/status/${status}`).then(res => res.data);
-
-export const fetchRequestItemsByBeneficiary = (beneficiaryName) => axios.get(`${API_URL}/request-items/beneficiary/${beneficiaryName}`).then(res => res.data);
+export const toggleScheduleStatus = async (id) => {
+  const response = await axios.patch(`${API_URL}/schedules/${id}/toggle-status`);
+  return response.data;
+};
