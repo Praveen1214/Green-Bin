@@ -9,7 +9,7 @@ import Login from "./pages/Auth/Login";
 import SignUp from "./pages/Auth/Signup";
 import Managers from "./components/Managers";
 import Request from "./components/Request";
-
+import Shedule from "./components/Shedule";
 
 
 
@@ -26,6 +26,7 @@ function MainLayout({ setIsAuthenticated }) {
             <Route path="/" element={<DashBoard />} />
             <Route path="/managers" element={<Managers />} />
             <Route path="/factoryrequests" element={<Request />} />
+            <Route path="/garbageschedule" element={<Shedule />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>

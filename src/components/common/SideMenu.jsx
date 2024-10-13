@@ -19,7 +19,7 @@ const items = [
   getItem("Users", "/farmers", <Icon icon="carbon:user-avatar-filled" />),
 
   getItem("Requests", "sub3", <Icon icon="carbon:request-quote" />, [
-    getItem("Residents", "/insights"),
+    getItem("Residents", "/garbageschedule"),
     getItem("Factories", "/factoryrequests"),
   ]),
   
