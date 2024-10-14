@@ -64,7 +64,7 @@ const GarbageRequestForms = () => {
           }}
         >
           <Divider orientation="left">Request Item Details</Divider>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <Form.Item
               name="category"
               label="Category"
@@ -93,7 +93,7 @@ const GarbageRequestForms = () => {
           </div>
 
           <Divider orientation="left">Beneficiary Details</Divider>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <Form.Item
               name="beneficiaryName"
               label="Beneficiary Name"
@@ -136,7 +136,7 @@ const GarbageRequestForms = () => {
               <Option value="Pending">Pending</Option>
               <Option value="Approved">Approved</Option>
               <Option value="Completed">Completed</Option>
-              <Option value="Cancelled">Cancelled</Option>
+              <Option value="Canceled">Canceled</Option>
             </Select>
           </Form.Item>
         </Form>

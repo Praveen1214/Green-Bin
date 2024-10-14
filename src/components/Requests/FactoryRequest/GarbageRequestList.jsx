@@ -99,6 +99,11 @@ const GarbageRequestList = () => {
     }
     ,
     {
+      title: "Factory Name",
+      dataIndex: "factoryName",
+      key: "factoryName",
+    },
+    {
       title: "Factory Address",
       dataIndex: "factoryAddress",
       key: "factoryAddress",
@@ -137,7 +142,7 @@ const GarbageRequestList = () => {
             <Button
               icon={<EditOutlined />}
               onClick={() => setEditingGarbageRequest(record)}
-              className="bg-blue-800 text-white"
+              className="text-white bg-blue-800"
             />
           </Tooltip>
           <Tooltip title="Delete">
@@ -150,7 +155,7 @@ const GarbageRequestList = () => {
             >
               <Button
                 icon={<DeleteOutlined />}
-                className="bg-blue-800 text-white"
+                className="text-white bg-blue-800"
               />
             </Popconfirm>
           </Tooltip>
@@ -164,7 +169,7 @@ const GarbageRequestList = () => {
             >
               <Button
                 icon={<SyncOutlined />}
-                className="bg-blue-800 text-white"
+                className="text-white bg-blue-800"
               />
             </Popconfirm>
           </Tooltip>
@@ -174,7 +179,7 @@ const GarbageRequestList = () => {
   ];
 
   return (
-    <div className="space-y-6 mt-5">
+    <div className="mt-5 space-y-6">
       <Row gutter={[16, 16]}>
         <Col xs={24} sm={8}>
           <Search
@@ -205,10 +210,10 @@ const GarbageRequestList = () => {
             value={selectedStatus}
           >
             <Option value="all">All Statuses</Option>
-            <Option value="pending">Pending</Option>
-            <Option value="approved">Approved</Option>
-            <Option value="completed">Completed</Option>
-            <Option value="cancelled">Cancelled</Option>
+            <Option value="Pending">Pending</Option>
+            <Option value="Approved">Approved</Option>
+            <Option value="Completed">Completed</Option>
+            <Option value="Canceled">Canceled</Option>
           </Select>
         </Col>
       </Row>
