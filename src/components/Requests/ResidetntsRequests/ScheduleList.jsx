@@ -124,13 +124,7 @@ const ScheduleList = () => {
       key: "actions",
       render: (_, record) => (
         <Space>
-          <Tooltip title="Edit">
-            <Button
-              icon={<EditOutlined />}
-              onClick={() => setEditingSchedule(record)}
-              className="bg-blue-800 text-white"
-            />
-          </Tooltip>
+          
           <Tooltip title="Delete">
             <Popconfirm
               title="Are you sure you want to delete this schedule?"
