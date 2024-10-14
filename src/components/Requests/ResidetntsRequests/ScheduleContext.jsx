@@ -59,7 +59,7 @@ export const ScheduleProvider = ({ children }) => {
   const handleToggleScheduleStatus = async (id) => {
     try {
       const response = await toggleScheduleStatus(id);
-      message.success(response.data.message);
+      message.success("Successed to update schedule status");
       loadSchedules();
     } catch (error) {
       message.error("Failed to update schedule status");

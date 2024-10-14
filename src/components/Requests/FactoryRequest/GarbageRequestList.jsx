@@ -63,6 +63,8 @@ const GarbageRequestList = () => {
     setFilteredRequests(tempList);
   };
 
+  
+
   const columns = [
     {
       title: "Request ID",

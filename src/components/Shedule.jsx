@@ -22,17 +22,10 @@ const Schedules = () => {
           <h1 className="text-white text-2xl">Schedule Management</h1>
         </header>
         <main className="p-5 flex-grow bg-gray-50">
-          <Button 
-            type="primary" 
-            icon={<PlusOutlined />} 
-            onClick={showModal}
-            className="mb-4 bg-blue-800 border-blue-800 hover:bg-blue-700"
-          >
-            Add New Schedule
-          </Button>
+          
           <ScheduleForm visible={isModalVisible} onCancel={() => setIsModalVisible(false)} />
-          <ScheduleStats />
-          <ScheduleList />
+          <ScheduleStats/>
+          <ScheduleList/>
         </main>
       </div>
     </ScheduleProvider>
