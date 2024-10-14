@@ -9,10 +9,10 @@ const GarbageRequestStats = () => {
 
   const stats = useMemo(() => {
     const totalRequests = garbageRequests.length;
-    const pendingRequests = garbageRequests.filter(r => r.status === "pending").length;
-    const approvedRequests = garbageRequests.filter(r => r.status === "approved").length;
-    const completedRequests = garbageRequests.filter(r => r.status === "completed").length;
-    const cancelledRequests = garbageRequests.filter(r => r.status === "cancelled").length;
+    const pendingRequests = garbageRequests.filter(r => r.status === "Pending").length;
+    const approvedRequests = garbageRequests.filter(r => r.status === "Approved").length;
+    const completedRequests = garbageRequests.filter(r => r.status === "Completed").length;
+    const cancelledRequests = garbageRequests.filter(r => r.status === "Canceled").length;
 
     return {
       totalRequests,
@@ -68,7 +68,7 @@ const GarbageRequestStats = () => {
       <Col xs={24} sm={12} md={8} lg={6}>
         <Card hoverable>
           <Statistic 
-            title="Cancelled Requests" 
+            title="Canceled Requests" 
             value={stats.cancelledRequests} 
             prefix={<StopOutlined />} 
             valueStyle={{ color: "#ff4d4f" }} 
