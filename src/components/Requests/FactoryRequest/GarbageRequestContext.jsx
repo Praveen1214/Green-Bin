@@ -51,12 +51,13 @@ export const GarbageRequestProvider = ({ children }) => {
   const handleToggleGarbageRequestStatus = async (id) => {
     try {
       const response = await toggleGarbageRequestStatus(id);
-      message.success(response.data.message);
-      loadGarbageRequests();
+      message.success(response.data.status);
+      loadGarbageRequests(); // Reload requests after the update
     } catch (error) {
       message.error("Failed to update garbage request status");
     }
   };
+  
 
   return (
     <GarbageRequestContext.Provider value={{

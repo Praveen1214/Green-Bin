@@ -18,11 +18,8 @@ export const updateSchedule = async (id, scheduleData) => {
 };
 
 export const deleteSchedule = async (id) => {
-  const response = await axios.delete(`${API_URL}/schedules/${id}`);
+  const response = await axios.delete(`${API_URL}/deletshedule/${id}`);
   return response.data;
 };
 
-export const toggleScheduleStatus = async (id) => {
-  const response = await axios.patch(`${API_URL}/schedules/${id}/toggle-status`);
-  return response.data;
-};
+export const toggleScheduleStatus = (id) => axios.put(`${API_URL}/cancelshedule/${id}`);

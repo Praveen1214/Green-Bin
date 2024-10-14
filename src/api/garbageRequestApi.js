@@ -5,11 +5,12 @@ const API_URL = 'http://localhost:5000/api/requestitem';
 
 export const fetchGarbageRequests = () => axios.get(`${API_URL}/getallrequestitems`).then(res => res.data);
 
-export const updateGarbageRequest = (id, garbageRequestData) => axios.put(`${API_URL}/update/${id}`, garbageRequestData);
+export const updateGarbageRequest = (id, garbageRequestData) => axios.put(`${API_URL}/updaterequest/${id}`, garbageRequestData);
 
-export const deleteGarbageRequest = (id) => axios.delete(`${API_URL}/delete/${id}`);
+export const deleteGarbageRequest = (id) => axios.delete(`${API_URL}/deleterequest/${id}`);
 
-export const toggleGarbageRequestStatus = (id) => axios.post(`${API_URL}/togglestatus/${id}`);
+export const toggleGarbageRequestStatus = (id) => axios.put(`${API_URL}/cancelrequest/${id}`);
+
 
 export const fetchGarbageRequestById = (id) => axios.get(`${API_URL}/get/${id}`).then(res => res.data);
 

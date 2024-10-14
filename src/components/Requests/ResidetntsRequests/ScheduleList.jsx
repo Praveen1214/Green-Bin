@@ -95,10 +95,9 @@ const ScheduleList = () => {
               : "default"
           }
         >
-          {text ? text.toUpperCase() : "N/A"}
+          {typeof text === "string" ? text.toUpperCase() : "N/A"}
         </Tag>
       ),
-      
     },
     {
       title: "Address",
@@ -119,7 +118,6 @@ const ScheduleList = () => {
           {text ? text.toUpperCase() : "N/A"}
         </Tag>
       ),
-      
     },
     {
       title: "Actions",
