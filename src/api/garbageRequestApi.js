@@ -9,6 +9,7 @@ export const updateGarbageRequest = (id, garbageRequestData) => axios.put(`${API
 
 export const deleteGarbageRequest = (id) => axios.delete(`${API_URL}/deleterequest/${id}`);
 
+
 export const toggleGarbageRequestStatus = (id) => axios.put(`${API_URL}/cancelrequest/${id}`);
 
 
